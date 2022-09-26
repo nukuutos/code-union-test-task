@@ -1,0 +1,44 @@
+@use '@styles/colors' as *;
+
+.navigation {
+  background: $color-white;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+
+  padding: 2.7rem 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 118.4rem;
+    margin: 0 auto;
+
+    transform: translateX(3.2rem);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    color: $color-blue-dark;
+    line-height: 2rem;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-right: 1.8rem;
+    }
+
+    &--active {
+      pointer-events: none;
+    }
+  }
+
+  &__button {
+    padding: 0.8rem 0;
+    width: 9rem;
+  }
+}

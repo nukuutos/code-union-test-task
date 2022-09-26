@@ -1,0 +1,27 @@
+@use '@styles/colors' as *;
+
+.input {
+  border: 1px solid $color-gray;
+  border-radius: 1.5rem;
+  outline: none;
+  background: $color-white;
+  padding: 2rem 1.8rem;
+  font-size: 2rem;
+  color: $color-blue-dark;
+
+  &::placeholder {
+    color: $color-gray-dark-2;
+  }
+
+  &:focus {
+    border-color: $color-blue-dark;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &--icon ~ img {
+    opacity: 0;
+  }
+}

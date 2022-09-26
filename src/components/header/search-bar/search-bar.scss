@@ -1,0 +1,21 @@
+@use '@styles/colors' as *;
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+
+  width: 124rem;
+  padding: 3.4rem 4.4rem 3.4rem 3.2rem;
+  background-color: $color-white;
+  border-radius: 2.5rem;
+  margin-top: 3.2rem;
+
+  &__input {
+    width: 41rem;
+  }
+
+  &__button {
+    padding: 2rem 0;
+    width: 20rem;
+  }
+}
