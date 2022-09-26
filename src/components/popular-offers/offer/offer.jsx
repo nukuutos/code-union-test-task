@@ -4,11 +4,11 @@ import './offer.scss';
 
 const Offer = () => (
   <div className="offer">
-    <img src="./place.png" className="offer__image" alt="Popular offer" />
+    <img src="./images/place.png" className="offer__image" alt="Popular offer" />
     <div className="offer__information">
       <h3 className="offer__title">Infinity Plaza</h3>
       <p className="offer__location">
-        <img src="./marker.svg" alt="Icon of location" />
+        <img src="./icons/marker.svg" alt="Icon of location" />
         Анталья, Турция
       </p>
       <p className="offer__description">Один из крупнейших ресторанов..</p>

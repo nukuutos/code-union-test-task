@@ -15,7 +15,7 @@ const SearchBar = () => (
   >
     <Form className="search-bar">
       <InputIcon
-        iconSrc="./search.svg"
+        iconSrc="./icons/search.svg"
         className="search-bar__input"
         name="address"
         placeholder="Город, адрес, шоссе или ЖК"
