@@ -7,11 +7,16 @@
 
   font-size: 2rem;
   color: $color-white;
-  background: $color-blue;
   border-radius: 15px;
+  background-color: $color-blue;
+  transition: 0.2s background-color;
 
   &--mini {
     font-size: 1.8rem;
     border-radius: 10px;
+  }
+
+  &:hover {
+    background-color: $color-purple;
   }
 }
