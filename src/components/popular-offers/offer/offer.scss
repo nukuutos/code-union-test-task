@@ -1,0 +1,56 @@
+@use '@styles/colors' as *;
+
+.offer {
+  display: flex;
+  flex-direction: column;
+
+  width: 30rem;
+  border-radius: 2.5rem;
+  overflow: hidden;
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 0rem 3rem 3rem;
+    background-color: $color-gray-light-2;
+  }
+
+  &__image {
+    width: 100%;
+    height: 20rem;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  &__location {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-top: 1.6rem;
+
+    img {
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-top: 1.2rem;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top: 1.2rem;
+  }
+
+  &__button {
+    padding: 0.8rem 4rem;
+    margin-top: 4rem;
+    align-self: flex-start;
+  }
+}

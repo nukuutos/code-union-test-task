@@ -1,0 +1,35 @@
+@use '@styles/colors' as *;
+
+.popular-offers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 6rem 0;
+  margin: 0 auto;
+  max-width: 124.2rem;
+
+  color: $color-blue-dark;
+
+  &__heading {
+    font-weight: 500;
+    font-size: 4.2rem;
+    line-height: 4.4rem;
+  }
+
+  &__description {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-top: 0.8rem;
+  }
+
+  &__offers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    margin-top: 2.8rem;
+    column-gap: 1.4rem;
+    row-gap: 1.6rem;
+  }
+}
