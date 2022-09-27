@@ -1,0 +1,18 @@
+@use '@styles/colors' as *;
+
+.agreement {
+  display: flex;
+  margin-top: 2.8rem;
+
+  &__text {
+    color: $color-blue-dark;
+    line-height: 1.92rem;
+    font-weight: 400;
+    max-width: 37.6rem;
+    margin-left: 0.8rem;
+
+    &--underline {
+      border-bottom: 1px solid $color-blue-dark;
+    }
+  }
+}

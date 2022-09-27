@@ -4,10 +4,10 @@ import PopularOffers from './popular-offers/popular-offers';
 import './app.scss';
 
 const App = () => (
-  <div className="app">
+  <main className="main">
     <Header />
     <PopularOffers />
-  </div>
+  </main>
 );
 
 export default App;

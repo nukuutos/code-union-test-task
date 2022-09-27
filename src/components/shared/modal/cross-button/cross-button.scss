@@ -1,0 +1,36 @@
+@use '@styles/colors' as *;
+
+.cross-button {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  $size: 3.8rem;
+  width: $size;
+  height: $size;
+
+  border-radius: 1.5rem;
+  border: 2px solid $color-gray-light-1;
+
+  background-color: $color-gray-light-1;
+
+  transition: 0.2s border-color, 0.2s background-color;
+
+  svg {
+    fill: $color-gray;
+    transition: 0.2s fill;
+  }
+
+  &:hover {
+    border-color: $color-blue;
+    background-color: $color-white;
+
+    svg {
+      fill: $color-blue;
+    }
+  }
+}

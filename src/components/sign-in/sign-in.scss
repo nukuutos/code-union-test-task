@@ -1,0 +1,47 @@
+@use '@styles/colors' as *;
+
+.sign-in {
+  &__form {
+    display: contents;
+  }
+
+  &__input {
+    margin-bottom: 0.8rem;
+    width: 40.4rem;
+  }
+
+  &__button {
+    align-self: stretch;
+    padding: 2rem 0;
+  }
+
+  &__sign-up-link {
+    font-size: 2rem;
+    color: $color-gray;
+    font-weight: 450;
+
+    margin-top: 2.8rem;
+
+    transition: 0.2s color;
+
+    &:hover {
+      color: $color-blue-dark;
+    }
+  }
+
+  &__forgot-password-link {
+    color: $color-gray;
+    line-height: 2rem;
+    font-weight: 450;
+
+    border-bottom: 1px solid $color-gray;
+    margin-top: 4.8rem;
+
+    transition: 0.2s border-color, 0.2s color;
+
+    &:hover {
+      color: $color-blue-dark;
+      border-color: $color-blue-dark;
+    }
+  }
+}

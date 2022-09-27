@@ -1,0 +1,18 @@
+@use '@styles/colors' as *;
+
+.sign-up {
+  &__form {
+    display: contents;
+  }
+
+  &__input {
+    margin-bottom: 0.8rem;
+    width: 40.4rem;
+  }
+
+  &__button {
+    align-self: stretch;
+    padding: 2rem 0;
+    margin-top: 3.6rem;
+  }
+}
