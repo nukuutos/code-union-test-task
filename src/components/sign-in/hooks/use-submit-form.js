@@ -11,8 +11,10 @@ const useSubmitForm = (close) => {
   const [, { signInSuccess }] = useContext(AuthContext);
   const form = useRef();
 
-  const onSuccess = (data) => {
-    signInSuccess(data.data);
+  const onSuccess = (result) => {
+    const { data } = result;
+    localStorage.setItem('refreshToken', data.tokens.refreshToken);
+    signInSuccess(data);
     close();
   };
 

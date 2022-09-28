@@ -21,7 +21,9 @@ const reducer = (state, action) => {
 };
 
 const initialState = {
-  tokens: {},
+  tokens: {
+    refreshToken: localStorage.getItem('refreshToken'),
+  },
   user: {},
 };
 
@@ -35,7 +37,10 @@ const useAuthState = () => {
 
   const signUpSuccess = useCallback((payload) => dispatch({ type: SIGN_UP_SUCCESS, payload }), []);
   const signInSuccess = useCallback((payload) => dispatch({ type: SIGN_IN_SUCCESS, payload }), []);
-  const logOut = useCallback(() => dispatch({ type: LOG_OUT }), []);
+  const logOut = useCallback(() => {
+    localStorage.removeItem('refreshToken');
+    dispatch({ type: LOG_OUT });
+  }, []);
 
   const memoizedState = useMemo(
     () => ({
