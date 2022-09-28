@@ -33,6 +33,7 @@ const useAuthState = () => {
     tokens: { accessToken, refreshToken },
   } = state;
 
+  const signUpSuccess = useCallback((payload) => dispatch({ type: SIGN_UP_SUCCESS, payload }), []);
   const signInSuccess = useCallback((payload) => dispatch({ type: SIGN_IN_SUCCESS, payload }), []);
   const logOut = useCallback(() => dispatch({ type: LOG_OUT }), []);
 
@@ -46,10 +47,11 @@ const useAuthState = () => {
 
   const actions = useMemo(
     () => ({
+      signUpSuccess,
       signInSuccess,
       logOut,
     }),
-    [signInSuccess, logOut]
+    [signInSuccess, signUpSuccess, logOut]
   );
 
   return [memoizedState, actions];
