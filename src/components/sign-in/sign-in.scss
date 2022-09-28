@@ -5,7 +5,8 @@
     display: contents;
   }
 
-  &__input {
+  &__input,
+  &__error {
     margin-bottom: 0.8rem;
     width: 40.4rem;
   }
