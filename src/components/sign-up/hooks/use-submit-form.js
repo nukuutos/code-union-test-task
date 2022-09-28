@@ -3,10 +3,17 @@ import { useQuery } from '@tanstack/react-query';
 
 import { AuthContext } from '../../../contexts/auth-context/auth-context';
 
-import axios from '../../utils/axios';
+import { signUpData } from '../../utils/data';
 
-const request = ({ email, nickname, phone, password }) =>
-  axios.post('/auth/registration/customer/new', { email, nickname, phone, password });
+// import axios from '../../utils/axios';
+
+// const request = ({ email, nickname, phone, password }) =>
+//   axios.post('/auth/registration/customer/new', { email, nickname, phone, password });
+
+const request = () =>
+  new Promise((resolve) => {
+    resolve(signUpData);
+  });
 
 const useSubmitForm = (close) => {
   const [, { signUpSuccess }] = useContext(AuthContext);

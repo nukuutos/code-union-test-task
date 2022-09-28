@@ -3,9 +3,16 @@ import { useQuery } from '@tanstack/react-query';
 
 import { AuthContext } from '../../../contexts/auth-context/auth-context';
 
-import axios from '../../utils/axios';
+import { signInData } from '../../utils/data';
 
-const request = (data) => axios.post('/auth/login', data);
+// import axios from '../../utils/axios';
+
+// const request = (data) => axios.post('/auth/login', data);
+
+const request = () =>
+  new Promise((resolve) => {
+    resolve(signInData);
+  });
 
 const useSubmitForm = (close) => {
   const [, { signInSuccess }] = useContext(AuthContext);

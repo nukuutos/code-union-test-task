@@ -1,15 +1,22 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useCallback, useRef } from 'react';
 
-import axios from '../../../utils/axios';
+import { restaurantsData } from '../../../utils/data';
+
+// import axios from '../../../utils/axios';
 
 export const MAX_RESTAURANTS = 10;
 
-const createRequest = (accessToken) => (page) =>
-  axios.get(`/restaurants/all?page=${page}&perPage=${MAX_RESTAURANTS}`, {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
+// const createRequest = (accessToken) => (page) =>
+//   axios.get(`/restaurants/all?page=${page}&perPage=${MAX_RESTAURANTS}`, {
+//     headers: {
+//       Authorization: `Bearer ${accessToken}`,
+//     },
+//   });
+
+const createRequest = () => () =>
+  new Promise((resolve) => {
+    resolve(restaurantsData);
   });
 
 const useInfiniteScroll = () => {
