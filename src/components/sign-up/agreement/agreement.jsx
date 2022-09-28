@@ -18,7 +18,7 @@ const Agreement = ({ inputName }) => (
 );
 
 Agreement.propTypes = {
-  inputName: PropTypes.func.isRequired,
+  inputName: PropTypes.string.isRequired,
 };
 
 export default Agreement;
