@@ -1,0 +1,6 @@
+@use '@styles/colors' as *;
+
+.unauthorized {
+  margin-top: 0.8rem;
+  color: $color-red;
+}
