@@ -12,10 +12,11 @@
     justify-content: space-between;
     align-items: center;
 
-    max-width: 118.4rem;
+    max-width: 120.4rem;
     margin: 0 auto;
 
-    transform: translateX(3.2rem);
+    padding-left: 3.2rem;
+    padding-right: 2rem;
   }
 
   &__list {
